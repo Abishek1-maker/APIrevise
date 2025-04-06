@@ -10,17 +10,16 @@ app.get('/api/users',(req,res)=>{
 })
 
 // for finding individual user with id
-app.get('/api/users/:id',(req,res)=>{
-    const id=Number(req.params.id)
-    const user=users.find((user) => user.id === id);
-    
+app.get('/api/users/:idi',(req,res)=>{
+    const idi=Number(req.params.idi)
+    const user=users.find((hi) => hi.id === idi);
  res.json(user);
 });
 app.get('/users/lastname', (req, res) => {
    
     const html = `
         <ul>
-            ${users.map((user) => `<li>${user.last_name}</li>`).join("")}
+            ${users.map((by) => `<li>${by.last_name}</li>`).join("")}
         </ul>
     `;
     res.send(html);
